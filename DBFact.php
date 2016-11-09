@@ -729,4 +729,21 @@ class DBFact extends BaseSoapClient
 
         return $response;
     }
+
+    /**
+     * @param $acSessionId
+     * @param $adDatum
+     * @param $anArtcode
+     * @param $anRelatie
+     * @param $anValuta
+     *
+     * @return object
+     */
+    public function getStaffelExport($acSessionId, $adDatum, $anArtcode, $anRelatie, $anValuta)
+    {
+        $response = $this->getSoapClient()->StaffelExport($acSessionId, $adDatum, $anArtcode, $anRelatie, $anValuta);
+        $response = $this->decodeResponse($response);
+
+        return $response;
+    }
 }
