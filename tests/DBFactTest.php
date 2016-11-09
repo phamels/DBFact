@@ -1,6 +1,6 @@
 <?php
 
-namespace TijsVerkoyen\DBFact\Tests;
+namespace Phamels\DBFact\Tests;
 
 require_once '../../../autoload.php';
 require_once 'config.php';

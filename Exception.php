@@ -1,6 +1,6 @@
 <?php
 
-namespace TijsVerkoyen\DBFact;
+namespace Phamels\DBFact;
 
 /**
  * DBFact Exception class

@@ -1,6 +1,6 @@
 <?php
 
-namespace TijsVerkoyen\DBFact;
+namespace Phamels\DBFact;
 
 use SoapClient as BaseSoapClient;
 use TijsVerkoyen\DBFact\Types\Message;

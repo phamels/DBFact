@@ -1,6 +1,6 @@
 <?php
 
-namespace TijsVerkoyen\DBFact\Types;
+namespace Phamels\DBFact\Types;
 
 /**
  * DBFact Backorder class

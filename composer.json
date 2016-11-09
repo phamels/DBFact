@@ -1,5 +1,5 @@
 {
-	"name": "tijsverkoyen/dbfact",
+	"name": "phamels/dbfact",
 	"type": "library",
 	"description": "PHP DBFact is a (wrapper)class to communicate with DBFact.",
 	"homepage": "https://github.com/phamels/DBFact",
@@ -21,8 +21,8 @@
 		"ext-curl": "*",
 		"ext-zip": "*"
 	},
-	"target-dir": "TijsVerkoyen/DBFact",
+	"target-dir": "Phamels/DBFact",
 	"autoload": {
-		"psr-0": {"TijsVerkoyen\\DBFact": ""}
+		"psr-0": {"Phamels\\DBFact": ""}
 	}
 }
