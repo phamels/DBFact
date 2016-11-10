@@ -13,7 +13,7 @@ use Phamels\DBFact\DBFact;
  */
 class BaseObject
 {
-    const TYPE_LOCATION = 'TijsVerkoyen\\DBFact\\Types\\';
+    const TYPE_LOCATION = 'Phamels\\DBFact\\Types\\';
 
     /**
      * Map the properties to a given type

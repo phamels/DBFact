@@ -104,7 +104,7 @@ class DBFact extends BaseSoapClient
         $positionOfFirstOpeningTag = strpos($response, '<', strpos($response, '<?') + 1) + 1;
         $positionOfFirstClosingTag = strpos($response, '>', $positionOfFirstOpeningTag);
 
-        $className = 'TijsVerkoyen\\DBFact\\Types\\' . substr(
+        $className = 'Phamels\\DBFact\\Types\\' . substr(
             $response,
             $positionOfFirstOpeningTag,
             ($positionOfFirstClosingTag - $positionOfFirstOpeningTag)
