@@ -6,7 +6,7 @@ require_once '../../../autoload.php';
 require_once 'config.php';
 require_once 'PHPUnit/Framework/TestCase.php';
 
-use \TijsVerkoyen\DBFact\DBFact;
+use \Phamels\DBFact\DBFact;
 
 /**
  * test case.
@@ -45,7 +45,7 @@ class DBFactTest extends PHPUnit_Framework_TestCase
      */
     private function isArticle($item)
     {
-        $this->assertInstanceOf('TijsVerkoyen\DBFact\Types\Article', $item);
+        $this->assertInstanceOf('Phamels\DBFact\Types\Article', $item);
     }
 
     /**
@@ -55,7 +55,7 @@ class DBFactTest extends PHPUnit_Framework_TestCase
      */
     private function isArtikel($item)
     {
-        $this->assertInstanceOf('\TijsVerkoyen\DBFact\Types\Artikel', $item);
+        $this->assertInstanceOf('\Phamels\DBFact\Types\Artikel', $item);
     }
 
     /**
@@ -64,7 +64,7 @@ class DBFactTest extends PHPUnit_Framework_TestCase
      */
     private function isImage($item)
     {
-        $this->assertInstanceOf('\TijsVerkoyen\DBFact\Types\Image', $item);
+        $this->assertInstanceOf('\Phamels\DBFact\Types\Image', $item);
     }
 
     /**
@@ -74,7 +74,7 @@ class DBFactTest extends PHPUnit_Framework_TestCase
      */
     private function isLadres($item)
     {
-        $this->assertInstanceOf('\TijsVerkoyen\DBFact\Types\Ladres', $item);
+        $this->assertInstanceOf('\Phamels\DBFact\Types\Ladres', $item);
     }
 
     /**
@@ -84,7 +84,7 @@ class DBFactTest extends PHPUnit_Framework_TestCase
      */
     private function isMessage($item)
     {
-        $this->assertInstanceOf('\TijsVerkoyen\DBFact\Types\Message', $item);
+        $this->assertInstanceOf('\Phamels\DBFact\Types\Message', $item);
     }
 
     /**
@@ -94,7 +94,7 @@ class DBFactTest extends PHPUnit_Framework_TestCase
      */
     private function isRelatie($item)
     {
-        $this->assertInstanceOf('\TijsVerkoyen\DBFact\Types\Relatie', $item);
+        $this->assertInstanceOf('\Phamels\DBFact\Types\Relatie', $item);
     }
 
     /**
@@ -174,7 +174,7 @@ class DBFactTest extends PHPUnit_Framework_TestCase
     {
         $response = $this->dbFact->login(LOGIN, PASSWORD);
         $response = $this->dbFact->getArtImage($response->SessionId, [119, 120]);
-        $this->assertInstanceOf('TijsVerkoyen\DBFact\Types\Images', $response);
+        $this->assertInstanceOf('Phamels\DBFact\Types\Images', $response);
         foreach ($response->Image as $item) {
             $this->isImage($item);
         }
@@ -187,7 +187,7 @@ class DBFactTest extends PHPUnit_Framework_TestCase
     {
         $response = $this->dbFact->login(LOGIN, PASSWORD);
         $response = $this->dbFact->getMultipleArtInfo($response->SessionId, [2, 3], 1);
-        $this->assertInstanceOf('TijsVerkoyen\DBFact\Types\Message', $response);
+        $this->assertInstanceOf('Phamels\DBFact\Types\Message', $response);
         foreach ($response->Article as $item) {
             $this->isArticle($item);
         }
@@ -200,7 +200,7 @@ class DBFactTest extends PHPUnit_Framework_TestCase
     {
         $response = $this->dbFact->login(LOGIN, PASSWORD);
         $response = $this->dbFact->keepAlive($response->SessionId);
-        $this->assertInstanceOf('TijsVerkoyen\DBFact\Types\Message', $response);
+        $this->assertInstanceOf('Phamels\DBFact\Types\Message', $response);
         $this->assertEquals('Ok', $response->KeepAlive);
     }
 

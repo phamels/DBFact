@@ -4,7 +4,7 @@
 require_once '../../../autoload.php';
 require_once 'config.php';
 
-use \TijsVerkoyen\DBFact\DBFact;
+use \Phamels\DBFact\DBFact;
 
 // create instance
 $dbFact = new DBFact(WSDL);

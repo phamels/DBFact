@@ -4,7 +4,7 @@ namespace Phamels\DBFact\Types;
 
 use DateTime;
 use SimpleXMLElement;
-use TijsVerkoyen\DBFact\DBFact;
+use Phamels\DBFact\DBFact;
 
 /**
  * DBFact BaseObject class

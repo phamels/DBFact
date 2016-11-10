@@ -3,7 +3,7 @@
 namespace Phamels\DBFact;
 
 use SoapClient as BaseSoapClient;
-use TijsVerkoyen\DBFact\Types\Message;
+use Phamels\DBFact\Types\Message;
 
 /**
  * DBFact class
@@ -348,7 +348,7 @@ class DBFact extends BaseSoapClient
 
         $return = [];
         foreach ($response->Artikel as $item) {
-            $return[] = self::convertToObject($item, 'TijsVerkoyen\DBFact\Types\Artikel');
+            $return[] = self::convertToObject($item, 'Phamels\DBFact\Types\Artikel');
         }
 
         return $return;
@@ -371,7 +371,7 @@ class DBFact extends BaseSoapClient
 
         $return = [];
         foreach ($response->Artikel as $item) {
-            $return[] = self::convertToObject($item, 'TijsVerkoyen\DBFact\Types\Artikel');
+            $return[] = self::convertToObject($item, 'Phamels\DBFact\Types\Artikel');
         }
 
         return $return;
@@ -394,7 +394,7 @@ class DBFact extends BaseSoapClient
      * @param  string $acSessionId
      * @param array $imageIds
      *
-     * @return TijsVerkoyen\DBFact\Types\Images
+     * @return Phamels\DBFact\Types\Images
      *
      * @throws Exception
      */
@@ -412,7 +412,7 @@ class DBFact extends BaseSoapClient
         $response = $this->getSoapClient()->GetArtImage($acSessionId, $acXmlMetImageIds);
         $response = $this->decodeZipResponse($response);
 
-        return self::convertToObject($response, 'TijsVerkoyen\DBFact\Types\Images');
+        return self::convertToObject($response, 'Phamels\DBFact\Types\Images');
     }
 
     /**
@@ -420,7 +420,7 @@ class DBFact extends BaseSoapClient
      * @param  array                             $artNummers
      * @param  null                              $anRelnum
      *
-     * @return TijsVerkoyen\DBFact\Types\Message
+     * @return Phamels\DBFact\Types\Message
      */
     public function getMultipleArtInfo($acSessionId, array $artNummers = null, $anRelnum = null)
     {
@@ -452,7 +452,7 @@ class DBFact extends BaseSoapClient
 
         $return = [];
         foreach ($response->crs_ladres as $item) {
-            $return[] = self::convertToObject($item, 'TijsVerkoyen\DBFact\Types\Ladres');
+            $return[] = self::convertToObject($item, 'Phamels\DBFact\Types\Ladres');
         }
 
         return $return;
@@ -462,7 +462,7 @@ class DBFact extends BaseSoapClient
      * @param $acSessionId
      * @param  array                                $appendixIds
      *
-     * @return TijsVerkoyen\DBFact\Types\Appendices
+     * @return Phamels\DBFact\Types\Appendices
      */
     public function getAppendices($acSessionId, array $appendixIds)
     {
@@ -485,7 +485,7 @@ class DBFact extends BaseSoapClient
      * @param array $appendixIds
      * @param array $fullPaths
      *
-     * @return TijsVerkoyen\DBFact\Types\Appendices
+     * @return Phamels\DBFact\Types\Appendices
      *
      * @throws Exception
      */
@@ -520,13 +520,13 @@ class DBFact extends BaseSoapClient
         $response = $this->getSoapClient()->GetAppendicesGezipt($acSessionId, $acXmlMetAppendixIds);
         $response = $this->decodeZipResponse($response);
 
-        return self::convertToObject($response, 'TijsVerkoyen\DBFact\Types\Appendices');
+        return self::convertToObject($response, 'Phamels\DBFact\Types\Appendices');
     }
 
     /**
      * @param $acSessionId
      *
-     * @return TijsVerkoyen\DBFact\Types\Message
+     * @return Phamels\DBFact\Types\Message
      */
     public function keepAlive($acSessionId)
     {
@@ -568,7 +568,7 @@ class DBFact extends BaseSoapClient
      * @param  array                             $files
      * @param  string[optional]                  $dossier
      *
-     * @return TijsVerkoyen\DBFact\Types\Message
+     * @return Phamels\DBFact\Types\Message
      */
     public function receiveFileWithComment(array $files, $dossier = null)
     {
@@ -609,7 +609,7 @@ class DBFact extends BaseSoapClient
 
         $return = [];
         foreach ($response->Relatie as $item) {
-            $return[] = self::convertToObject($item, 'TijsVerkoyen\DBFact\Types\Relatie');
+            $return[] = self::convertToObject($item, 'Phamels\DBFact\Types\Relatie');
         }
 
         return $return;

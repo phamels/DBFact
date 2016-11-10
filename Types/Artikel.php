@@ -380,12 +380,12 @@ class Artikel extends BaseObject
     public $VeldD5;
 
     /**
-     * @var \TijsVerkoyen\DBFact\Types\Prijzen
+     * @var \Phamels\DBFact\Types\Prijzen
      */
     public $Prijzen;
 
     /**
-     * @var \TijsVerkoyen\DBFact\Types\Kosten
+     * @var \Phamels\DBFact\Types\Kosten
      */
     public $Kosten;
 
